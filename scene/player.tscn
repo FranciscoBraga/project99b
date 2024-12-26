@@ -219,11 +219,11 @@ region = Rect2(352, 192, 32, 32)
 atlas = ExtResource("1_mvte4")
 region = Rect2(384, 192, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_i1k0s"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_y8rs5"]
 atlas = ExtResource("1_mvte4")
 region = Rect2(64, 192, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fagqf"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_4daue"]
 atlas = ExtResource("1_mvte4")
 region = Rect2(96, 192, 32, 32)
 
@@ -478,10 +478,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_i1k0s")
+"texture": SubResource("AtlasTexture_y8rs5")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_fagqf")
+"texture": SubResource("AtlasTexture_4daue")
 }],
 "loop": true,
 "name": &"w-walk",
@@ -497,9 +497,15 @@ script = ExtResource("1_gig10")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_i48ps")
-animation = &"nw-walk"
-frame = 1
-frame_progress = 0.882948
+animation = &"w-walk"
+frame_progress = 0.498655
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_ja8y6")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)
+limit_left = -239
+limit_top = -135
+limit_right = 277
+limit_bottom = 154
