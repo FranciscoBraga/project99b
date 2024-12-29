@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1735176777
+::res://::1735427547
 icon.svg::CompressedTexture2D::9008396261940893349::1733923565::1733923568::1::::<><>::
 ::res://art/::1734009693
 bow.png::CompressedTexture2D::5072540894068852302::1733922986::1734009693::1::::<><>::
@@ -10,7 +10,7 @@ SlimeIcon.png::CompressedTexture2D::4292759580588495691::1733923049::1734009693:
 SmokePartical.png::CompressedTexture2D::5452995229758669501::1733923052::1734009693::1::::<><>::
 survivalgame-enemy-slime.png::CompressedTexture2D::3785973472336896619::1733923030::1734009693::1::::<><>::
 survivalgame-player-green.png::CompressedTexture2D::1576197776385509265::1733923039::1734009693::1::::<><>::
-::res://art/environment/::1735178893
+::res://art/environment/::1735178898
 apple-icon.png::CompressedTexture2D::6869409874704005079::1733922999::1734009693::1::::<><>::
 stick-icon.png::CompressedTexture2D::2398031067097185956::1733923005::1734009693::1::::<><>::
 survivalgame-appletree.png::CompressedTexture2D::8692319189806299440::1733923007::1734009693::1::::<><>::
@@ -22,8 +22,10 @@ survivalgame-trees.png::CompressedTexture2D::5540540295874249114::1733923023::17
 ::res://art/inventory.art/::1734009693
 inventory-background.png::CompressedTexture2D::1113363065933498689::1733922995::1734009693::1::::<><>::
 ::res://inventory/::1733923635
-::res://scene/::1735177371
-player.tscn::PackedScene::6764122965919662963::1735177371::0::1::::<><>::res://script/player.gd<>uid://wpr0nvxr2ikv::::res://art/character/survivalgame-player-green.png
-world.tscn::PackedScene::3168346552023216757::1735177371::0::1::::<><>::uid://c3mud8iquc1q2::::res://scene/player.tscn
-::res://script/::1735177371
-player.gd::GDScript::-1::1735177371::0::1::::<>CharacterBody2D<>::
+::res://scene/::1735268406
+apple_tree.tscn::PackedScene::2708390340347021470::1735268406::0::1::::<><>::res://script/apple_tree.gd<>uid://dv3vhyrvyxmdc::::res://art/environment/survivalgame-appletree.png
+player.tscn::PackedScene::6764122965919662963::1735267084::0::1::::<><>::res://script/player.gd<>uid://wpr0nvxr2ikv::::res://art/character/survivalgame-player-green.png
+world.tscn::PackedScene::3168346552023216757::1735267085::0::1::::<><>::uid://cuwatp1ybwpj8::::res://art/environment/survivalgame-terrian-defult.png<>uid://c3mud8iquc1q2::::res://scene/player.tscn<>uid://531q45p0hwdq::::res://art/environment/survivalgame-terrian-cliffs.png<>uid://ck645h5yt2jdi::::res://art/environment/survivalgame-trees.png<>uid://dgbslpr657oa5::::res://art/environment/survivalgame-terrian-water.png
+::res://script/::1735268406
+apple_tree.gd::GDScript::-1::1735268406::0::1::::<>Node2D<>::
+player.gd::GDScript::-1::1735180857::0::1::::<>CharacterBody2D<>::

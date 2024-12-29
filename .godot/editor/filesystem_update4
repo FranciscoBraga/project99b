@@ -1,3 +1,7 @@
-res://scene/player.tscn
+res://script/apple_tree.gd
 res://scene/world.tscn
+res://scene/player.tscn
+res://scene/apple_tree.tscn
 res://script/player.gd
+res://script/apple_collectable.gd
+res://scene/apple_collectable.tscn
