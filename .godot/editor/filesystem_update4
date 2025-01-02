@@ -1,7 +1,12 @@
-res://script/apple_tree.gd
 res://scene/world.tscn
+res://inventory/inventory_item.gd
+res://inventory/inventory.gd
 res://scene/player.tscn
-res://scene/apple_tree.tscn
 res://script/player.gd
-res://script/apple_collectable.gd
+res://inventory/inv_ui.gd
+res://scene/apple_tree.tscn
 res://scene/apple_collectable.tscn
+res://inventory/inv_ui.tscn
+res://inventory/inv_ui_slot.tscn
+res://inventory/inv_ui_slot.gd
+res://inventory/playerinv.tres
