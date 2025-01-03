@@ -7,4 +7,3 @@ res://inventory/inv_ui.tscn
 res://inventory/inv_ui_slot.tscn
 res://inventory/stick_collectable.tscn
 res://script/arrow.tscn
-res://script/player.gd

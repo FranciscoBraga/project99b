@@ -323,10 +323,11 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ja8y6"]
-radius = 4.0
-height = 12.0
+radius = 3.0
+height = 10.0
 
 [node name="player" type="CharacterBody2D"]
+y_sort_enabled = true
 script = ExtResource("1_gig10")
 inv = ExtResource("2_36uld")
 
@@ -335,6 +336,7 @@ sprite_frames = SubResource("SpriteFrames_i48ps")
 animation = &"nw-attack"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
 shape = SubResource("CapsuleShape2D_ja8y6")
 
 [node name="Camera2D" type="Camera2D" parent="."]

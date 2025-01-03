@@ -48,6 +48,7 @@ func _physics_process(delta):
 	
 func play_anim(dir):
 	if !bow_equiped:
+		speed = 100
 		if player_state == "idle":
 			$AnimatedSprite2D.play("idle")
 		if player_state == "walking":
@@ -69,7 +70,7 @@ func play_anim(dir):
 			if dir.x < -0.5 and dir.y < 0.5:
 				$AnimatedSprite2D.play("nw-walk")
 	if bow_equiped:
-	
+		speed = 0
 		if mouse_lec_from_player.x > -25 and mouse_lec_from_player.x <= 25 and mouse_lec_from_player.y < 0:
 			$AnimatedSprite2D.play("n-attack")
 		if mouse_lec_from_player.y >= -25 and mouse_lec_from_player.y <= 25 and mouse_lec_from_player.x > 0:
