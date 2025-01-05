@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://ble1g7041mdw4"]
+[gd_scene load_steps=18 format=4 uid="uid://ble1g7041mdw4"]
 
 [ext_resource type="Texture2D" uid="uid://cuwatp1ybwpj8" path="res://art/environment/survivalgame-terrian-defult.png" id="1_1jasx"]
 [ext_resource type="PackedScene" uid="uid://c3mud8iquc1q2" path="res://scene/player.tscn" id="1_1n8ao"]
@@ -7,8 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://dgbslpr657oa5" path="res://art/environment/survivalgame-terrian-water.png" id="4_awcqp"]
 [ext_resource type="PackedScene" uid="uid://bet7177eboxfy" path="res://scene/apple_tree.tscn" id="6_1lgpp"]
 [ext_resource type="PackedScene" uid="uid://dn36oedw7tf33" path="res://inventory/stick_collectable.tscn" id="6_csypx"]
+[ext_resource type="PackedScene" uid="uid://chhhlc8b28ff3" path="res://scene/slime.tscn" id="7_q5vn4"]
+[ext_resource type="PackedScene" uid="uid://n4eml7dhctlv" path="res://scene/world_2.tscn" id="9_g583y"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pnjsp"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sva47"]
 resource_name = "1"
 texture = ExtResource("1_1jasx")
 texture_region_size = Vector2i(40, 40)
@@ -96,9 +98,9 @@ texture_region_size = Vector2i(40, 40)
 
 [sub_resource type="TileSet" id="TileSet_ie2j0"]
 tile_size = Vector2i(40, 40)
-sources/7 = SubResource("TileSetAtlasSource_pnjsp")
+sources/7 = SubResource("TileSetAtlasSource_sva47")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hsixj"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mq5td"]
 texture = ExtResource("2_6m67v")
 0:0/0 = 0
 1:0/0 = 0
@@ -355,9 +357,9 @@ texture = ExtResource("2_6m67v")
 44:6/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_40a33"]
-sources/1 = SubResource("TileSetAtlasSource_hsixj")
+sources/1 = SubResource("TileSetAtlasSource_mq5td")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h6e4r"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2cwoa"]
 texture = ExtResource("3_3t7n7")
 texture_region_size = Vector2i(40, 40)
 2:0/0 = 0
@@ -704,9 +706,9 @@ texture_region_size = Vector2i(40, 40)
 
 [sub_resource type="TileSet" id="TileSet_d0m5m"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_h6e4r")
+sources/0 = SubResource("TileSetAtlasSource_2cwoa")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8t43i"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d45mu"]
 texture = ExtResource("4_awcqp")
 texture_region_size = Vector2i(40, 40)
 0:0/0 = 0
@@ -1009,12 +1011,16 @@ texture_region_size = Vector2i(40, 40)
 
 [sub_resource type="TileSet" id="TileSet_8fiy7"]
 tile_size = Vector2i(40, 40)
-sources/0 = SubResource("TileSetAtlasSource_8t43i")
+sources/0 = SubResource("TileSetAtlasSource_d45mu")
 
 [node name="world" type="Node2D"]
+y_sort_enabled = true
 
 [node name="TileMapLayer-default" type="TileMapLayer" parent="."]
+z_index = -1
+y_sort_enabled = true
 position = Vector2(19, 22)
+scale = Vector2(0.995193, 0.98819)
 tile_map_data = PackedByteArray("AAD6/wIABwACAAAAAAD5/wMABwAAAAEAAAD6/wMABwACAAEAAAD7/wMABwAAAAIAAAD8/wMABwABAAEAAAD9/wMABwACAAIAAAD+/wMABwACAAAAAAD//wMABwACAAEAAAAAAAMABwABAAAAAAABAAMABwACAAAAAAACAAMABwAAAAIAAAADAAMABwAAAAIAAAAEAAMABwABAAIAAAAFAAMABwAAAAIAAAAGAAMABwACAAEAAAAGAAIABwACAAEAAAAFAAIABwAAAAAAAAAEAAIABwABAAIAAAADAAIABwAAAAAAAAACAAIABwABAAIAAAABAAIABwACAAAAAAAAAAIABwACAAEAAAD//wIABwABAAIAAAD+/wIABwAAAAAAAAD9/wIABwAAAAAAAAD8/wIABwAAAAAAAAD7/wIABwAAAAEAAAD5/wIABwABAAEAAAD4/wIABwACAAEAAAD4/wEABwACAAIAAAD5/wEABwACAAAAAAD6/wEABwAAAAEAAAD7/wEABwAAAAEAAAD8/wEABwAAAAAAAAD9/wEABwAAAAAAAAD+/wEABwACAAAAAAD//wEABwACAAAAAAAAAAEABwACAAAAAAABAAEABwACAAAAAAACAAEABwAAAAEAAAADAAEABwAAAAIAAAAEAAEABwABAAEAAAAFAAEABwABAAIAAAAGAAEABwACAAAAAAAGAAAABwAAAAEAAAAFAAAABwACAAEAAAAEAAAABwACAAAAAAADAAAABwAAAAIAAAACAAAABwACAAIAAAABAAAABwACAAEAAAAAAAAABwABAAAAAAD//wAABwABAAAAAAD+/wAABwABAAAAAAD9/wAABwAAAAAAAAD8/wAABwAAAAAAAAD7/wAABwAAAAIAAAD6/wAABwABAAEAAAD5/wAABwAAAAIAAAD+////BwABAAAAAAD9////BwABAAAAAAD8////BwABAAAAAAD7////BwACAAEAAAD6////BwAAAAEAAAD5////BwACAAIAAAD8//7/BwABAAEAAAD9//7/BwABAAAAAAD+//7/BwABAAAAAAAAAP//BwABAAAAAAD/////BwABAAAAAAD///7/BwABAAAAAAAAAP7/BwABAAAAAAD7//7/BwABAAAAAAD6//7/BwABAAAAAAD5//7/BwABAAAAAAD4/wAABwABAAAAAAD4////BwABAAAAAAD4//7/BwABAAAAAAABAP7/BwABAAAAAAABAP//BwABAAAAAAACAP//BwABAAAAAAADAP//BwABAAAAAAAEAP//BwABAAAAAAAEAP7/BwABAAAAAAADAP7/BwABAAAAAAACAP7/BwABAAAAAAD4//3/BwAAAAAAAAD5//3/BwACAAAAAAD6//3/BwABAAIAAAD7//3/BwACAAAAAAD8//3/BwABAAAAAAAEAAQABwAAAAEAAAAFAP//BwACAAIAAAAGAP//BwABAAIAAAAFAP7/BwAAAAAAAAAGAP7/BwABAAEAAAAGAP3/BwABAAIAAAAFAP3/BwAAAAAAAAAEAP3/BwACAAEAAAADAP3/BwACAAIAAAACAP3/BwABAAAAAAABAP3/BwACAAEAAAAAAP3/BwABAAAAAAD///3/BwABAAEAAAD+//3/BwAAAAEAAAD9//3/BwACAAIAAAD7//z/BwAAAAAAAAD6//z/BwABAAAAAAD5//z/BwABAAIAAAD4//z/BwABAAIAAAD8//z/BwACAAAAAAD9//z/BwABAAIAAAD+//z/BwAAAAIAAAD///z/BwAAAAAAAAAAAPz/BwABAAEAAAABAPz/BwACAAEAAAACAPz/BwACAAIAAAADAPz/BwACAAEAAAAEAPz/BwACAAIAAAAFAPz/BwAAAAIAAAAGAPz/BwABAAIAAAAGAPv/BwABAAIAAAAFAPv/BwAAAAEAAAAEAPv/BwAAAAAAAAADAPv/BwACAAIAAAACAPv/BwACAAIAAAABAPv/BwACAAAAAAAAAPv/BwAAAAEAAAD///v/BwAAAAAAAAD+//v/BwAAAAEAAAD9//v/BwAAAAIAAAD8//v/BwAAAAEAAAD7//v/BwABAAEAAAD6//v/BwABAAEAAAD5//v/BwABAAIAAAD4//v/BwACAAEAAAD4//r/BwACAAAAAAD5//r/BwABAAIAAAD6//r/BwACAAAAAAD7//r/BwACAAEAAAD8//r/BwABAAEAAAD9//r/BwACAAAAAAD+//r/BwAAAAAAAAD///r/BwACAAEAAAAAAPr/BwABAAEAAAABAPr/BwACAAEAAAACAPr/BwACAAIAAAADAPr/BwAAAAEAAAAEAPr/BwABAAEAAAAFAPr/BwABAAIAAAAGAPr/BwACAAIAAAD4/wMABwAAAAIAAAAGAAQABwACAAAAAAAFAAQABwABAAAAAAADAAQABwACAAAAAAACAAQABwAAAAAAAAABAAQABwABAAIAAAAAAAQABwAAAAEAAAD//wQABwABAAIAAAD+/wQABwAAAAAAAAD9/wQABwAAAAEAAAD8/wQABwABAAIAAAD7/wQABwACAAIAAAD6/wQABwAAAAAAAAD5/wQABwABAAAAAAD4/wQABwABAAIAAAA=")
 tile_set = SubResource("TileSet_ie2j0")
 
@@ -1032,6 +1038,10 @@ tile_set = SubResource("TileSet_d0m5m")
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAD5//3/AAAHAAAAAAD5//7/AAAHAAEAAAD5////AAAHAAIAAAD6//3/AAAIAAAAAAD6//7/AAAIAAEAAAD6////AAAIAAIAAAD7//3/AAAJAAAAAAD7//7/AAAGAAEAAAD7////AAAJAAIAAAD8//7/AAARAAIAAAD9//7/AAARAAIAAAD+//7/AAADAAIAAAD+//3/AAAAAAEAAAA=")
 tile_set = SubResource("TileSet_8fiy7")
+
+[node name="world2" parent="." instance=ExtResource("9_g583y")]
+position = Vector2(19, 22)
+scale = Vector2(0.995193, 0.98819)
 
 [node name="apple_tree" parent="." instance=ExtResource("6_1lgpp")]
 position = Vector2(-42, -39)
@@ -1051,10 +1061,9 @@ position = Vector2(184, -29)
 [node name="player" parent="." instance=ExtResource("1_1n8ao")]
 position = Vector2(51, 137)
 
+[node name="slime" parent="." instance=ExtResource("7_q5vn4")]
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(164, -130, -45, -128, -47, -60, -59, -46, -163, -45, -166, -20, -179, -9, -214, -6, -261, -9, -270, -20, -274, -96, -257, -108, -193, -111, -170, -98, -167, -71, -111, -69, -76, -71, -71, -79, -71, -115, -71, -130, -156, -129, -160, -134, -160, -217, -156, -225, 172, -225, 169, -134)
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(-300, 221, -327, 238, -343, -238, 314, -235, 324, 217, 314, 253, -327, 246, -300, 221, 298, 221, 298, -218, -302, -219)
+polygon = PackedVector2Array(-293, -206, -299, -217, 296, -213, 298, 158, 305, 626, -281, 632, -279, 215, -294, -204, -327, -220, -315, 680, 334, 672, 337, 159, 333, -240, -318, -244, -327, -220)

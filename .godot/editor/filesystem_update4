@@ -1,9 +1,7 @@
 res://scene/player.tscn
 res://inventory/playerinv.tres
+res://script/slime.gd
+res://script/world_2.gd
 res://scene/world.tscn
-res://scene/apple_tree.tscn
-res://scene/apple_collectable.tscn
-res://inventory/inv_ui.tscn
-res://inventory/inv_ui_slot.tscn
-res://inventory/stick_collectable.tscn
-res://script/arrow.tscn
+res://scene/world_2.tscn
+res://script/player.gd

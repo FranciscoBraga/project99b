@@ -11,9 +11,10 @@ var bow_cooldwn = true
 var arrow = preload("res://script/arrow.tscn")
 var mouse_lec_from_player = null
 
+@onready var camera = $Camera2D
+
 func _physics_process(delta):
 	mouse_lec_from_player = get_global_mouse_position() - self.position
-	print(mouse_lec_from_player)
 	var direction = Input.get_vector("left","right","up","down")
 	
 	if direction.x == 0 and direction.y == 0:

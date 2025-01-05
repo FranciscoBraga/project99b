@@ -344,9 +344,10 @@ zoom = Vector2(3, 3)
 limit_left = -239
 limit_top = -135
 limit_right = 277
-limit_bottom = 154
+limit_bottom = 590
 
 [node name="Inv_UI" parent="." instance=ExtResource("4_sxow1")]
+y_sort_enabled = true
 offset_left = 9.0
 offset_top = -56.0
 offset_right = 99.0

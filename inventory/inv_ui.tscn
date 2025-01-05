@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://d2dd0fv8nqcea" path="res://inventory/inv_ui_slot.tscn" id="3_703wx"]
 
 [node name="Inv_UI" type="Control"]
+z_index = 2
 layout_mode = 3
 anchors_preset = 0
 offset_right = 90.0
